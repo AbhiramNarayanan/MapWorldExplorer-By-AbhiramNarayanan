@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+body {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  background-color: #1890ff;
+  color: white;
+  padding: 16px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  
+  align-items: center;
+}
+
+
+
+.profile-button {
+  cursor: pointer;
+  background-color: #40a9ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+ 
+ 
+}
+
+
+.Sider {
+  background-color: #f0f2f5;
+}
+
+.sidebar-content {
+  padding: 16px;
+}
+
+/* Content styles */
+.Content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* Form Input styles */
+.Select {
+  margin-bottom: 16px;
+}
+
+.LoadButton {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Region Info styles */
+.RegionInfo {
+  position: absolute;
+  bottom: 16px;
+  left: 0px;
+  background-color: black;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  color: white;
+  
+}
+
+/* Night Mode styles */
+.NightMode {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.NightModeLabel {
+  margin-right: 8px;
+}
+
+.NightModeToggle {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #bfbfbf;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.NightModeToggle::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.NightModeToggle:checked::before {
+  transform: translateX(20px);
+}
+
+
+
+.dummy-login-logout,
+.profile-button
+
+{
+  cursor: pointer;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  
+ 
+ 
+}
+
+
+.dummy-login-logout:hover {
+  background-color: #40a9ff;
+}
+
+.dummy-login-logout:active {
+  background-color: #096dd9;
+}
+
+.profile-button svg {
+  margin-right: 8px;
+}
+
+
+.title {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.RegionInfo.white-text {
+  color: black;
+}
+.regionInfo{
+  color: black;
+}
+.nightMode{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Sidebar {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NightModeLabel {
+  margin-right: 8px;
+  color: aqua;
 }
+
+.NightModeToggleWrapper {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #bfbfbf;
+  cursor: pointer;
+}
+
+.NightModeToggleSlider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.NightModeToggleOn {
+  transform: translateX(20px);
+  background-color: #1890ff;
+}
+
+
+
+.NightMode .NightModeToggleSlider::before {
+  transform: translateX(8px);
+}
+
+
+
+.NightMode {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+
+.NightMode .Header {
+  background-color: #001529;
+  color: #ffffff;
+}
+
+.NightMode .NightModeToggleSlider {
+  background-color: #ffffff;
+}
+
+.NightMode .NightModeToggleOn {
+  background-color: #1890ff;
+}
+
+.NightMode .dummy-login-logout,
+.NightMode .profile-button,
+.NightMode .RegionInfo {
+  color: #ffffff;
+}
+
+.NightMode .Sider {
+  background-color: #1f1f1f;
+}
+
+.MapContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; 
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+
+.DefaultMapContainer {
+  
+  object-fit: cover;
+  
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+}
+
+
+
+.map-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
